@@ -189,7 +189,7 @@ class _MatrixGestureDetectorState extends State<MatrixGestureDetector> {
     widget.onMatrixUpdate(
         matrix, translationDeltaMatrix, scaleDeltaMatrix, rotationDeltaMatrix);
     // onScaleEnd is possibly called multiple times when multiple children exist so we call widget.onScaleStart here too
-    // widget.onScaleStart?.call();
+    widget.onScaleStart?.call();
   }
 
   Matrix4 _translate(Offset translation) {
